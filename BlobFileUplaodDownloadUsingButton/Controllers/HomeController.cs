@@ -1,4 +1,6 @@
-﻿using BlobFileUplaodDownloadUsingButton.Models;
+﻿using Azure.Storage.Blobs;
+using Azure.Storage.Sas;
+using BlobFileUplaodDownloadUsingButton.Models;
 using BlobFileUplaodDownloadUsingButton.Services.Abstract;
 using BlobFileUplaodDownloadUsingButton.Services.Concrete;
 using Microsoft.AspNetCore.Mvc;
@@ -43,6 +45,7 @@ namespace BlobFileUplaodDownloadUsingButton.Controllers
 
         public IActionResult PreviewImages()
         {
+            ViewBag.ImageUrl = _imageService.GetImages();
             return View();
         }
 

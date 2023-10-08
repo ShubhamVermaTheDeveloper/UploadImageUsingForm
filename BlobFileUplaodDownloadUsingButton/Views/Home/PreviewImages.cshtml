@@ -3,6 +3,18 @@
 }
 <h1>@ViewData["Title"]</h1>
 
-<p>
-    <img src="https://shubham12.blob.core.windows.net/finaltry/b1b949da-6dab-4529-91d4-876f6886531e.jpg?sp=r&st=2023-10-08T08:18:51Z&se=2023-10-08T16:18:51Z&spr=https&sv=2022-11-02&sr=b&sig=u%2Fz1sJrMpTRzQr300XXrMOOt4cqJSwl0Vbbp97E3dUs%3D" />
-</p>
+<table>
+    <tr>
+        <td>
+            @foreach (var img in ViewBag.ImageUrl)
+            {
+                <img src="@img" height="100PX" width="100PX" />
+
+                <br />
+            }
+            
+        </td>
+    </tr>
+</table>
+
+
