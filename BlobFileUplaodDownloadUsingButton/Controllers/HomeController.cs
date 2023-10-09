@@ -37,7 +37,6 @@ namespace BlobFileUplaodDownloadUsingButton.Controllers
                 return View("Index");
 
             _imageService.UploadImageToAzure(imageModel.File);
-
             return View("Index");
         }
 
